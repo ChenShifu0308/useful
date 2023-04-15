@@ -1,4 +1,3 @@
-import React from 'react'
 import LanguageDropdown from './LanguageDropdown'
 import ThemeToggle from './ThemeToggle'
 

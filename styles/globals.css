@@ -2,15 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-
-}
-
-@layer base{
+@layer base {
   body {
-      @apply bg-white text-zinc-900  dark:bg-gray-800 dark:text-zinc-100
+    @apply bg-white text-zinc-900 dark:bg-bg-darkmode dark:text-zinc-100
   }
 }
+
 /* 
 .dark {
   @apply bg-gray-800 text-zinc-50;
@@ -19,3 +16,4 @@
 .base {
   @apply bg-neutral-100 text-gray-900
 } */
+

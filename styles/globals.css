@@ -3,9 +3,19 @@
 @tailwind utilities;
 
 :root {
-  @apply h-full bg-slate-200
+
 }
 
-body {
-  @apply h-full bg-slate-200
+@layer base{
+  body {
+      @apply bg-white text-zinc-900  dark:bg-gray-800 dark:text-zinc-100
+  }
 }
+/* 
+.dark {
+  @apply bg-gray-800 text-zinc-50;
+}
+
+.base {
+  @apply bg-neutral-100 text-gray-900
+} */

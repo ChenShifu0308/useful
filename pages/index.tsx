@@ -1,10 +1,8 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { useTranslation } from 'react-i18next'
 
 export default function Home() {
+  const { t } = useTranslation()
   return (
-    <div className='dark:text-neutral-100 text-neutral-900'>Hello World</div>
+    <div className='dark:text-neutral-100 text-neutral-900'>{t('website_name_suffix')}</div>
   )
 }

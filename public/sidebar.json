@@ -1,0 +1,92 @@
+[
+    {
+        "label": "Developer Tools",
+        "key": "developer_tools",
+        "children": [
+            {
+                "label": "Converters",
+                "key": "converters",
+                "children": [
+                    {
+                        "label": "YAML-JSON",
+                        "key": "yaml-json"
+                    },
+                    {
+                        "label": "Number Base",
+                        "key": "number_base"
+                    },
+                    {
+                        "label": "Date",
+                        "key": "date_formatter"
+                    }
+                ]
+            },
+            {
+                "label": "Formatters",
+                "key": "formatters",
+                "children": [
+                    {
+                        "label": "Json",
+                        "key": "json_formatter"
+                    },
+                    {
+                        "label": "XML",
+                        "key": "xml_formatter"
+                    },
+                    {
+                        "label": "SQL",
+                        "key": "sql_formatter"
+                    }
+                ]
+            },
+            {
+                "label": "Encode/Decode",
+                "key": "conmverters",
+                "children": []
+            },
+            {
+                "label": "Generators",
+                "key": "generators",
+                "children": []
+            }
+        ]
+    },
+    {
+        "label": "Calculate Tools",
+        "key": "calculate_tools",
+        "children": [
+            {
+                "label": "Calculators",
+                "key": "calculators",
+                "children": [
+                    {
+                        "label": "Basic",
+                        "key": "basic_calculator"
+                    },
+                    {
+                        "label": "Scientific",
+                        "key": "scientific_calculator"
+                    }
+                ]
+            },
+            {
+                "label": "Convertions",
+                "key": "convertions",
+                "children": [
+                    {
+                        "label": "Length",
+                        "key": "length"
+                    },
+                    {
+                        "label": "Weight",
+                        "key": "weight"
+                    },
+                    {
+                        "label": "Area",
+                        "key": "area"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,3 +1,38 @@
+## Todos
+- 切换到next-i18next支持多语言
+- 侧边栏通过json进行配置
+    - 页面对象： key,name,到多语言的映射，搜索关键字，页面类型(功能页，markdown，或者其他网站链接的列表)
+    - 侧边栏items树
+- 加入router支持点击侧边栏后显示对应的工具
+- 小屏幕通过抽屉页展示sidebar
+- 支持侧边栏搜索
+
+
+### Object Definition 
+```json
+// page item
+ {
+    "key": "xml_formatter", // 页面唯一key，和sidebar "key" 对应，同时也是router的路径
+    "name": "XML Formatter", // 显示名，支持多语言
+    "search": "xml formatter", //搜索关键字
+    "type": "function" // 页面类型: function, links, markdown
+}
+
+// side bar item
+{
+    "label": "Formatters", // 显示名，支持多语言
+    "key": "formatters", // key for item
+    "children": [ // 子item
+        {
+            "label": "Json",
+            "key": "json_formatter"  //页面对象的key, 同时也是router的路径
+        }
+    ]
+}
+```
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

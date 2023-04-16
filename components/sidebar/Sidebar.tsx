@@ -4,31 +4,22 @@ import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/ico
 import type { MenuProps, MenuTheme } from 'antd';
 import { Menu } from 'antd';
 import { useTheme } from 'next-themes';
+import { useRouter } from 'next/router'
+import sidebarData from '../../public/sidebar.json';
+
 
 /* 大屏幕放在左边，小屏幕作为左侧侧边栏伸缩 */
 export default function Sidebar() {
     const { systemTheme, theme: menuTheme, setTheme } = useTheme();
-    // const [menuTheme, setMenuTheme] = useState<MenuTheme>(theme === 'dark' ? 'dark' : 'light');
-
+    const router = useRouter()
     const onClick: MenuProps['onClick'] = (e) => {
-        console.log('click ', e);
+        console.log('click ', e.key);
+        /* TODO: 先检查目标页面是否存在 */
+        router.push(`/items/${e.key}`)
     };
 
-    /* Test items */
-    const items: MenuProps['items'] = [
-        { type: 'divider' },
-        getItem('Developer Tools', 'dev_tools', <AppstoreOutlined />, [
-            getItem('Converters', 'sub1'),
-            getItem('Encode&Decode', 'sub2'),
-            getItem('Formatters', 'sub3', null, [getItem('Json', 'json'), getItem('XML', 'xml')]),
-        ]),
-        getItem('Navigation Three', 'sub4', <SettingOutlined />, [
-            getItem('Option 9', '9'),
-            getItem('Option 10', '10'),
-            getItem('Option 11', '11'),
-            getItem('Option 12', '12'),
-          ]),
-    ];
+    /* Items */
+    const items: MenuProps['items'] = constructMemuItems(sidebarData as SideBarData[]);
 
     return (
         <div className='hidden md:flex flex-col w-56 border-r border-neutral-200 dark:border-neutral-700'>
@@ -47,7 +38,7 @@ export default function Sidebar() {
             <Menu
                 onClick={onClick}
                 theme={menuTheme === 'dark' ? 'dark' : 'light'}
-                style={{ width: 220  }}
+                style={{ width: 220 }}
                 defaultOpenKeys={['sub1']}
                 mode="inline"
                 items={items}
@@ -57,6 +48,12 @@ export default function Sidebar() {
 }
 
 type MenuItem = Required<MenuProps>['items'][number];
+
+type SideBarData = {
+    label: string;
+    key: string;
+    children: SideBarData[];
+}
 
 function getItem(
     label: React.ReactNode,
@@ -72,4 +69,13 @@ function getItem(
         label,
         type,
     } as MenuItem;
+}
+
+function constructMemuItems(sidebarData: SideBarData[]): MenuItem[] | undefined {
+    if (sidebarData == null) return undefined;
+    const items: MenuItem[] = [];
+    sidebarData.forEach((item) => {
+        items.push(getItem(item.label, item.key, null, constructMemuItems(item.children)));
+    });
+    return items;
 }

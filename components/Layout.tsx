@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from './Sidebar'
+import Sidebar from './sidebar/Sidebar'
 import Header from './header/Header'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Header />
                 <div className="flex h-full">
                     <Sidebar />
-                    <div className="">
+                    <div className="w-full">
                         {children}
                     </div>
                 </div>

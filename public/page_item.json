@@ -1,0 +1,20 @@
+[
+    {
+        "key": "xml_formatter",
+        "name": "XML Formatter",
+        "search": "xml formatter",
+        "type": "function"
+    },
+    {
+        "key": "links_sample",
+        "name": "Links Sample",
+        "search": "Links",
+        "type": "links"
+    },
+    {
+        "key": "markdown_sample",
+        "name": "Markdown Sample",
+        "search": "Markdown",
+        "type": "markdown"
+    }
+]

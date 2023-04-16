@@ -2,6 +2,7 @@ import { useState } from 'react'
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import xmlFormatter from 'xml-formatter'
+import { useTranslation } from 'react-i18next';
 
 const SAMPLE = `
 <root>
@@ -25,6 +26,7 @@ export default function Xml_Formatter() {
         src: SAMPLE,
         dst: format(SAMPLE)
     });
+    const { t } = useTranslation()
     const onChangeHandler = (e: any) => {
         const target = e.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
@@ -52,7 +54,7 @@ export default function Xml_Formatter() {
     return (
         <div className='w-full h-full'>
             <div>
-                <h1 className='h-10 text-2xl font-bold m-2'>XML Formatter</h1>
+                <h1 className='h-10 text-2xl font-bold m-2'>{t('XML Formatter')}</h1>
             </div>
             <Box sx={{ p: 1 }} >
                 <span>Input</span>

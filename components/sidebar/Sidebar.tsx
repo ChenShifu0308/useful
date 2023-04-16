@@ -1,16 +1,18 @@
-import React, { useState } from 'react'
-import { SearchIcon } from '@heroicons/react/outline'
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
-import type { MenuProps, MenuTheme } from 'antd';
+import { SearchIcon } from '@heroicons/react/outline';
+import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 import { useTheme } from 'next-themes';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import sidebarData from '../../public/sidebar.json';
 
 /* TODO: 大屏幕放在左边，小屏幕作为左侧侧边栏伸缩 */
 
 export default function Sidebar() {
     const { systemTheme, theme: menuTheme, setTheme } = useTheme();
+    const { t } = useTranslation()
+
     const router = useRouter()
     const onClick: MenuProps['onClick'] = (e) => {
         console.log('click ', e.key);
@@ -19,7 +21,7 @@ export default function Sidebar() {
     };
 
     /* Items */
-    const items: MenuProps['items'] = constructMemuItems(sidebarData as SideBarData[]);
+    const items: MenuProps['items'] = constructMemuItems(sidebarData as SideBarData[], t);
 
     return (
         <div className='hidden md:flex flex-col w-56 border-r border-neutral-200 dark:border-neutral-700'>
@@ -71,11 +73,11 @@ function getItem(
     } as MenuItem;
 }
 
-function constructMemuItems(sidebarData: SideBarData[]): MenuItem[] | undefined {
+function constructMemuItems(sidebarData: SideBarData[], t: Function): MenuItem[] | undefined {
     if (sidebarData == null) return undefined;
     const items: MenuItem[] = [];
     sidebarData.forEach((item) => {
-        items.push(getItem(item.label, item.key, null, constructMemuItems(item.children)));
+        items.push(getItem(t(item.label), item.key, null, constructMemuItems(item.children, t)));
     });
     return items;
 }

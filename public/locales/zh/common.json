@@ -1,4 +1,23 @@
 {
-    "website_name":"有用的",
-    "website_name_suffix":"网站"
+    "website_name": "有用的",
+    "website_name_suffix": "网站",
+    "Developer Tools": "开发工具",
+    "Converters": "转换器",
+    "YAML-JSON": "YAML-JSON",
+    "Number Base": "数字进制",
+    "Date": "日期",
+    "Formatters": "格式化工具",
+    "Json Formatter": "Json格式化",
+    "XML Formatter": "XML格式化",
+    "SQL Formatter": "SQL格式化 ",
+    "Encode/Decode": "编码/解码",
+    "Generators": "生成器",
+    "Calculate Tools": "计算工具",
+    "Calculators": "计算器",
+    "Basic": "基本",
+    "Scientific": "科学",
+    "Convertions": "转换",
+    "Length": "长度",
+    "Weight": "重量",
+    "Area": "面积"
 }

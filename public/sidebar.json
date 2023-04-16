@@ -26,15 +26,15 @@
                 "key": "formatters",
                 "children": [
                     {
-                        "label": "Json",
+                        "label": "Json Formatter",
                         "key": "json_formatter"
                     },
                     {
-                        "label": "XML",
+                        "label": "XML Formatter",
                         "key": "xml_formatter"
                     },
                     {
-                        "label": "SQL",
+                        "label": "SQL Formatter",
                         "key": "sql_formatter"
                     }
                 ]

@@ -20,7 +20,7 @@ const format = (src: string) => {
     })
 }
 
-export default function xml_formatter() {
+export default function Xml_Formatter() {
     let [form, setForm] = useState({
         src: SAMPLE,
         dst: format(SAMPLE)
@@ -56,11 +56,11 @@ export default function xml_formatter() {
             </div>
             <Box sx={{ p: 1 }} >
                 <span>Input</span>
-                <TextField label="" fullWidth={true} multiline rows={10} name="src" variant="outlined" size="small" fullWidth onChange={onChangeHandler} value={form.src} />
+                <TextField label="" fullWidth={true} multiline rows={10} name="src" variant="outlined" size="small" onChange={onChangeHandler} value={form.src} />
             </Box>
             <Box sx={{ p: 1 }} >
                 <span>Output</span>
-                <TextField label="" fullWidth={true} multiline rows={10} name="dst" variant="outlined" size="small" fullWidth onChange={onChangeHandler} value={form.dst} />
+                <TextField label="" fullWidth={true} multiline rows={10} name="dst" variant="outlined" size="small" onChange={onChangeHandler} value={form.dst} />
             </Box>
         </div>
     )

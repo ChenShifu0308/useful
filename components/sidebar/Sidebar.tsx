@@ -7,8 +7,8 @@ import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router'
 import sidebarData from '../../public/sidebar.json';
 
+/* TODO: 大屏幕放在左边，小屏幕作为左侧侧边栏伸缩 */
 
-/* 大屏幕放在左边，小屏幕作为左侧侧边栏伸缩 */
 export default function Sidebar() {
     const { systemTheme, theme: menuTheme, setTheme } = useTheme();
     const router = useRouter()

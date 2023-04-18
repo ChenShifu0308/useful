@@ -42,12 +42,118 @@
             {
                 "label": "Encode/Decode",
                 "key": "conmverters",
-                "children": []
+                "children": [
+                    {
+                        "label": "HTML Escape / Unescape",
+                        "key": "html_escape"
+                    },
+                    {
+                        "label": "Base64",
+                        "key": "base64"
+                    },
+                    {
+                        "label": "Crypto",
+                        "key": "crypto",
+                        "children": [
+                            {
+                                "label": "RSA",
+                                "key": "rsa"
+                            },
+                            {
+                                "label": "DES",
+                                "key": "des"
+                            },
+                            {
+                                "label": "AES",
+                                "key": "aes"
+                            },
+                            {
+                                "label": "MD5",
+                                "key": "md5"
+                            },
+                            {
+                                "label": "SHA1",
+                                "key": "sha1"
+                            },
+                            {
+                                "label": "SHA256",
+                                "key": "sha256"
+                            },
+                            {
+                                "label": "SHA512",
+                                "key": "sha512"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "JWT",
+                        "key": "jwt"
+                    },
+                    {
+                        "label": "URL Encode / Decode",
+                        "key": "url_encode"
+                    },
+                    {
+                        "label": "Unicode Encode / Decode",
+                        "key": "unicode_encode"
+                    }
+                ]
             },
             {
                 "label": "Generators",
                 "key": "generators",
-                "children": []
+                "children": [
+                    {
+                        "label": "QR Code",
+                        "key": "qr_code"
+                    },
+                    {
+                        "label": "Barcode",
+                        "key": "barcode"
+                    },
+                    {
+                        "label": "UUID",
+                        "key": "uuid"
+                    },
+                    {
+                        "label": "Random String",
+                        "key": "random_string"
+                    },
+                    {
+                        "label": "Random Number",
+                        "key": "random_number"
+                    },
+                    {
+                        "label": "Random Color",
+                        "key": "random_color"
+                    },
+                    {
+                        "label": "Random Password",
+                        "key": "random_password"
+                    }
+                ]
+            },
+            {
+                "label": "Network Tools",
+                "key": "network_tools",
+                "children": [
+                    {
+                        "label": "Ping",
+                        "key": "ping"
+                    },
+                    {
+                        "label": "Traceroute",
+                        "key": "traceroute"
+                    },
+                    {
+                        "label": "Whois",
+                        "key": "whois"
+                    },
+                    {
+                        "label": "DNS Lookup",
+                        "key": "dns_lookup"
+                    }
+                ]
             }
         ]
     },
@@ -84,8 +190,192 @@
                     {
                         "label": "Area",
                         "key": "area"
+                    },
+                    {
+                        "label": "Volume",
+                        "key": "volume"
+                    },
+                    {
+                        "label": "Temperature",
+                        "key": "temperature"
+                    },
+                    {
+                        "label": "Speed",
+                        "key": "speed"
+                    },
+                    {
+                        "label": "Time",
+                        "key": "time"
+                    },
+                    {
+                        "label": "Data",
+                        "key": "data"
+                    },
+                    {
+                        "label": "Pressure",
+                        "key": "pressure"
+                    },
+                    {
+                        "label": "Energy",
+                        "key": "energy"
+                    },
+                    {
+                        "label": "Power",
+                        "key": "power"
+                    },
+                    {
+                        "label": "Frequency",
+                        "key": "frequency"
+                    },
+                    {
+                        "label": "Angle",
+                        "key": "angle"
+                    },
+                    {
+                        "label": "Force",
+                        "key": "force"
+                    },
+                    {
+                        "label": "Torque",
+                        "key": "torque"
+                    },
+                    {
+                        "label": "Density",
+                        "key": "density"
+                    },
+                    {
+                        "label": "Fuel",
+                        "key": "fuel"
+                    },
+                    {
+                        "label": "Illuminance",
+                        "key": "illuminance"
+                    },
+                    {
+                        "label": "Parts Per Million",
+                        "key": "parts_per_million"
+                    },
+                    {
+                        "label": "Dynamic Viscosity",
+                        "key": "dynamic_viscosity"
+                    },
+                    {
+                        "label": "Kinematic Viscosity",
+                        "key": "kinematic_viscosity"
+                    },
+                    {
+                        "label": "Sound",
+                        "key": "sound"
+                    },
+                    {
+                        "label": "Magnetic Field",
+                        "key": "magnetic_field"
+                    },
+                    {
+                        "label": "Magnetic Flux",
+                        "key": "magnetic_flux"
+                    },
+                    {
+                        "label": "Magnetic Flux Density",
+                        "key": "magnetic_flux_density"
+                    },
+                    {
+                        "label": "Inductance",
+                        "key": "inductance"
+                    },
+                    {
+                        "label": "Electric Charge",
+                        "key": "electric_charge"
+                    },
+                    {
+                        "label": "Electric Potential",
+                        "key": "electric_potential"
                     }
                 ]
+            }
+        ]
+    },
+    {
+        "label": "Image Tools",
+        "key": "image_tools",
+        "children": [
+            {
+                "label": "Color Picker",
+                "key": "color_picker"
+            },
+            {
+                "label": "Image Tools",
+                "key": "imge_tools",
+                "children": [
+                    {
+                        "label": "Image Editor",
+                        "key": "image_eidtor"
+                    },
+                    {
+                        "label": "Image Converter",
+                        "key": "image_converter"
+                    },
+                    {
+                        "label": "Image Resizer",
+                        "key": "image_resizer"
+                    },
+                    {
+                        "label": "Image Cropper",
+                        "key": "image_cropper"
+                    },
+                    {
+                        "label": "Image to Base64",
+                        "key": "image_to_base64"
+                    }
+                ]
+            },
+            {
+                "label": "AI Image",
+                "key": "ai_image"
+            }
+        ]
+    },
+    {
+        "label": "Video Tools",
+        "key": "video_tools"
+    },
+    {
+        "label": "Audio Tools",
+        "key": "audio_tools",
+        "children": [
+            {
+                "label": "Audio to Text",
+                "key": "audio_to_text"
+            },
+            {
+                "label": "Text to Audio",
+                "key": "text_to_audio"
+            },
+            {
+                "label": "AI Audio Tools",
+                "key": "ai_audio_tools"
+            }
+        ]
+    },
+    {
+        "label": "Text",
+        "key": "text",
+        "children": [
+            {
+                "label": "Markdown",
+                "key": "markdown"
+            },
+            {
+                "label": "Text Diff",
+                "key": "text_diff"
+            },
+            {
+                "label": "Case Convert",
+                "key": "case_convert"
+            },
+            {
+                "label": "AI Text",
+                "key": "ai_text"
             }
         ]
     }

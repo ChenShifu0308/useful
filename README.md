@@ -31,6 +31,18 @@
 }
 ```
 
+# Features Reference
+- 网络工具： https://mxtoolbox.com/NetworkTools.aspx
+- 其他工具网站：
+    - https://c.runoob.com/
+    - https://tool.lu/
+    - https://www.luoxiao123.cn/online-tools
+    - https://www.toolnb.com/
+    - https://tiomg.org/
+- AI: https://c.runoob.com/ai/
+- 学生用: http://xhslink.com/m5pmap
+- 电子书
+- 游戏
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

@@ -65,5 +65,8 @@ export default function Xml_Formatter() {
                 <TextField label="" fullWidth={true} multiline rows={10} name="dst" variant="outlined" size="small" onChange={onChangeHandler} value={form.dst} />
             </Box>
         </div>
+        /* Provide More
+        1. 其他网站同类推荐，因为别人可能做的更好
+        2. 评论区- 让大家留言推荐更多，或者反馈。 */
     )
 }
